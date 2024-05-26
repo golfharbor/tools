@@ -1,0 +1,20 @@
+import string
+
+def remove_special_characters(input_string):
+    """
+    Returns a string without any special characters.
+
+    :param input_string: Input string.
+    :return: String without any special characters.
+    """
+    # Define special characters
+    special_characters = string.punctuation + string.whitespace
+
+    # Create a new string with special characters removed
+    cleaned_string = ''.join(char for char in input_string if char not in special_characters)
+
+    return cleaned_string
+
+# Example usage:
+input_string = "Hello! How are you? I'm doing fine, thank you."
+print(remove_special_characters(input_string))  # Output: HelloHowareyouImdoingfinethankyou
